@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Fragmentos do Pensamento Humano</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 40px;
+            transition: background 0.5s, color 0.5s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .secret-btn, .back-btn {
+            background: none;
+            border: none;
+            color: #555;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .video-mode {
+            background: #fff;
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        video {
+            max-width: 90%;
+            max-height: 80vh;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="cultMode">
+        <h1>Fragmentos do Pensamento Humano</h1>
+        <p>
+            A consciência é o teatro onde os pensamentos dançam com as sombras da dúvida. 
+            Cada ideia é um espelho quebrado refletindo o infinito da existência. 
+            A realidade? Apenas uma simulação de interpretações.
+        </p>
+        <p>
+            O tempo escorre pelas frestas da percepção, e a verdade, essa amante fugidia, se esconde atrás de cada certeza.
+        </p>
+        <button class="secret-btn" onclick="mostrarVideo()">[...]</button>
+    </div>
+
+    <div class="video-mode hidden" id="provaMode">
+        <video controls>
+            <source src="PROVA.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo.
+        </video>
+        <button class="back-btn" onclick="voltarCult()">Fechar Pensamento</button>
+    </div>
+
+    <script>
+        function mostrarVideo() {
+            document.getElementById('cultMode').classList.add('hidden');
+            document.getElementById('provaMode').classList.remove('hidden');
+        }
+
+        function voltarCult() {
+            document.getElementById('provaMode').classList.add('hidden');
+            document.getElementById('cultMode').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
